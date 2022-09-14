@@ -1,6 +1,6 @@
 require("dotenv").config()
-const init = require("./initCommands")
-const controllerMsg = require("./controller/messages")
+const init = require("./initialization/init")
+const controllerMsg = require("./controller/controller")
 
 const { Client, GatewayIntentBits } = require('discord.js');
 
