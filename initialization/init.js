@@ -7,11 +7,11 @@ const rest = new REST({ version: '10' }).setToken(process.env.CLIENT_TOKEN);
 
 module.exports = async function init(){
   try {
-    console.log('Started refreshing application (/) commands.');
+    console.log('começou');
     
     await rest.put(Routes.applicationCommands(process.env.CLIENT_ID), { body: commands });
     
-    console.log('Successfully reloaded application (/) commands.');
+    console.log('terminou');
   } catch (error) {
       console.error(error);
   }

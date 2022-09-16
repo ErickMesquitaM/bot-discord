@@ -1,5 +1,9 @@
 module.exports = [
+
 	{
+		name: "commands",
+		description: 'response all commands'
+	},{
 		name: 'currency',
 		description: 'response with currency money',
 		options: [{
@@ -21,34 +25,10 @@ module.exports = [
 			]
 		}]
 	},{
-		name: 'math',
-		description: 'simple math accounts',
-		options: [{
-			name: "type",
-			description: "type math",
-			type: 3,
-			required: true,
-			choices: [
-				{
-				  name: "ADD",
-				  value: "add"
-				},{
-				  name: "MIN",
-				  value: "min"
-				},{
-				  name: "MULT",
-				  value: "mult"
-				},{
-				  name: "DIVI",
-				  value: "divi"
-				},
-			  ]
-		}],
-		// options: [{
-		//   name: "number",
-		//   description: "number",
-		//   type: 10,
-		//   required: true,
-		// }],
+		name: 'meme',
+		description: 'response random meme',
+	},{
+		name: "movie",
+		description: "pick random movie"
 	}
 ];
