@@ -29,6 +29,12 @@ module.exports = [
 		description: 'response random meme',
 	},{
 		name: "movie",
-		description: "pick random movie"
+		description: "pick random movie",
+		options: [{
+			name: "name",
+			description: "name the movie",
+			type: 3,
+			required: false
+		}]
 	}
 ];

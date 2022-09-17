@@ -29,8 +29,18 @@ module.exports = async (interaction)=>{
 
   } else if( cmd === 'movie' ){
 
-    await movies()
-    await interaction.reply( "movie" );
+    let nameMovie = interaction.options.data[0].value
 
+    let movie = await movies(nameMovie)
+    
+    if(movie){
+      await interaction.reply([
+        {files: [ 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2' + movie.poster_path ] },
+        movie.original_title,
+        movie.overview
+      ]);
+    } else {
+      await interaction.reply( "erro" )
+    }
   }
 }

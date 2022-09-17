@@ -1,12 +1,16 @@
-const MovieDB = require('moviedb')(process.env.KEY_TMDB);
+const { MovieDb } = require('moviedb-promise')
+const moviedb = new MovieDb(process.env.KEY_TMDB)
 
-async function movies(){
+async function movies(name){
 
-  MovieDB.searchMovie({ query: 'The Hobbit' }, (err, res) => {
-    console.log(res.results[0])
-  });
+  if(!name){
+    name = 'The lord of the rings'
+  } 
+
+  let movies = await moviedb.searchMovie({ query: name })
+  let movie = movies.results[0]
+
+  return movie
 }
-
-// img = https://www.themoviedb.org/t/p/w600_and_h900_bestv2
 
 module.exports = movies

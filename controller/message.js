@@ -9,7 +9,6 @@ module.exports = async function message(msg){
 
   args = args.map( n => Number(n) )
 
-
   if(cmd === "!add"){
     await msg.reply( add(args) )
 

@@ -12,7 +12,7 @@
     "axios": "^0.27.2",
     "discord.js": "^14.3.0",
     "dotenv": "^16.0.2",
-    "moviedb": "^0.2.12",
+    "moviedb-promise": "^3.1.18",
     "nodemon": "^2.0.19"
   }
 }
